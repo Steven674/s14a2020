@@ -90,8 +90,10 @@ code, markup and prose".
             color: rgba(0, 0, 64, 1);
         }
         ```
-    + For app.js
+    + For app.py
         ```
+        from flask import Flask, render_template
+      
         app = Flask(__name__)
 
 
@@ -134,6 +136,9 @@ code, markup and prose".
     + Push upstream to master branch: `git push -u origin master`
     
 11. Setup for deployment to Heroku:
+    + Setup a free account at [Heroku](https://signup.heroku.com/login).
+    + Please follow this [guide](https://devcenter.heroku.com/articles/heroku-cli) to setup Heroku's CLI (command
+     line interface).
     + Use the command line to login to Heroku in the browser (you may need to create a new account): `heroku login`
     + Create a new heroku app: `heroku create`
     + Push git repo to heroku: `git push heroku master`
