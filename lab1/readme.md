@@ -42,7 +42,7 @@ code, markup and prose".
         def hello_world():
             return 'Hello, World!'
         ```
-    + Run locally:
+    + Run locally (Windows users may replace 'export' with 'set':
         + Define app: `export FLASK_APP=app.py`
         + Change port: `export FLASK_RUN_PORT=5005`
         + Set environment / debug: `export FLASK_ENV=development`
