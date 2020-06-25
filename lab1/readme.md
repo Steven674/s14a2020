@@ -21,7 +21,7 @@ code, markup and prose".
 4. Create a new virtual environmentL
     + With [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html): `conda
      create --name labenv python=3.8`  (can reuse env)
-    + With [python3](https://docs.python.org/3/library/venv.html): `python3 -m env`
+    + With [python3](https://docs.python.org/3/library/venv.html): `python3 -m venv env`
     
 5. Activate new virtual environment:
     + With conda: `conda activate labenv`
