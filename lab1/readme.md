@@ -129,7 +129,6 @@ code, markup and prose".
         .idea
         .DS_store
         ```
-    + Push to master: `git push -u origin master`
     + Check status: `git status`
     + Add all files: `git add .`
     + Commit with message: `git commit -m "Init commit"`
