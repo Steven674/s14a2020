@@ -13,3 +13,4 @@ Harvard Summer School CSCI S-14A "Building Interactive Web Applications for Data
 ### Objectives
 
 1. Lab 1 - setup your Python workspace and get started with a virtual environment, Flask app and Heroku deployment.
+2. Lab 2 - get started with data science with Numpy, Pandas, Scikit Learn, and Matplot Lib.readme.md
