@@ -36,15 +36,15 @@ Welcome! This week we will be connecting to a Postgres database using models to 
         from flask_sqlalchemy import SQLAlchemy
         
         # Create DB instance
-        db = SQLAlchemy()
+        Db = SQLAlchemy()
         
         
-        class User(db.model):
+        class User(db.Model):
             # Fields
             __tablename__ = 'users'
-            user_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-            first_name = db.Column(db.String(64), nullable=False)
-            age = db.Column(db.Integer, nullable=False)
+            user_id = Db.Column(Db.Integer, primary_key=True, autoincrement=True)
+            first_name = Db.Column(Db.String(64), nullable=False)
+            age = Db.Column(Db.Integer, nullable=False)
         
             # toString
             def toString(self):
@@ -122,7 +122,7 @@ Welcome! This week we will be connecting to a Postgres database using models to 
         
         # Iterate and print
         for user in users:
-        User.tostring(user)
+        User.toString(user)
         
         return render_template("index.html")
         ```
@@ -164,5 +164,5 @@ Welcome! This week we will be connecting to a Postgres database using models to 
     4. Create a route to update a user's name or age
     5. Create a route that can generate mock data of any amount (names can be nonsense).
     6. Improve the styling of your site.
-    7 (EC). Introduce validation features that require user confirmation for deleting/updating.
+    7. (EC). Introduce validation features that require user confirmation for deleting/updating.
    
