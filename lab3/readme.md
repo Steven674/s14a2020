@@ -90,9 +90,9 @@ Welcome! This week we will be connecting to a Postgres database using models to 
         
         
         class UserForm(FlaskForm):
-        first_name = StringField('First Name', validators=[DataRequired()])
-        age = IntegerField('Age', validators=[DataRequired()])
-        submit = SubmitField('Enter')
+            first_name = StringField('First Name', validators=[DataRequired()])
+            age = IntegerField('Age', validators=[DataRequired()])
+            submit = SubmitField('Enter')
         
         ```
 
@@ -117,35 +117,35 @@ Welcome! This week we will be connecting to a Postgres database using models to 
         ```
         @app.route('/')
         def index():
-        # Query all
-        users = User.query.all()
-        
-        # Iterate and print
-        for user in users:
-        User.toString(user)
-        
-        return render_template("index.html")
+            # Query all
+            users = User.query.all()
+            
+            # Iterate and print
+            for user in users:
+                User.toString(user)
+            
+            return render_template("index.html")
         ```
     + Create a '/adduser' route with GET and POST methods (CREATE):
         ```
         # @route /adduser - GET, POST
         @app.route('/adduser', methods=['GET', 'POST'])
         def addUser():
-        form = UserForm()
-        # If GET
-        if request.method == 'GET':
-            return render_template('adduser.html', form=form)
-        # If POST
-        else:
-            if form.validate_on_submit():
-                first_name = request.form['first_name']
-                age = request.form['age']
-                new_user = User(first_name=first_name, age=age)
-                Db.session.add(new_user)
-                Db.session.commit()
-                return redirect(url_for('index'))
-            else:
+            form = UserForm()
+            # If GET
+            if request.method == 'GET':
                 return render_template('adduser.html', form=form)
+            # If POST
+            else:
+                if form.validate_on_submit():
+                    first_name = request.form['first_name']
+                    age = request.form['age']
+                    new_user = User(first_name=first_name, age=age)
+                    Db.session.add(new_user)
+                    Db.session.commit()
+                    return redirect(url_for('index'))
+                else:
+                    return render_template('adduser.html', form=form)
         ```
     + Expand route, '/adduser/<first_name>/<age>', to add users based on url parameters":
         ```
