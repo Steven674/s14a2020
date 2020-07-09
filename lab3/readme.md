@@ -39,7 +39,7 @@ Welcome! This week we will be connecting to a Postgres database using models to 
         Db = SQLAlchemy()
         
         
-        class User(db.Model):
+        class User(Db.Model):
             # Fields
             __tablename__ = 'users'
             user_id = Db.Column(Db.Integer, primary_key=True, autoincrement=True)
