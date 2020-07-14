@@ -15,3 +15,4 @@ Harvard Summer School CSCI S-14A "Building Interactive Web Applications for Data
 1. Lab 1 - setup your Python workspace and get started with a virtual environment, Flask app and Heroku deployment.
 2. Lab 2 - get started with data science using Numpy, Pandas, Scikit Learn, and Matplot Lib and connect these tools to the Flask app.
 3. Lab 3 - connect to a database with PostgresSQL and use in Flask with models.
+4. Lab 4 - use flask to deliver data to a client request and build data visualizations using d3.
