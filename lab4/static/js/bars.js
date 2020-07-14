@@ -105,7 +105,7 @@ class Bars {
         vis.render();
     }
 
-    /** @function wrangle()
+    /** @function render()
      * Builds, updates, removes elements in vis
      *
      * @returns void
