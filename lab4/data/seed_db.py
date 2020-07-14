@@ -23,6 +23,8 @@ conn.commit()
 df_users = pd.read_csv('./data/predefined_users.csv', index_col=0)
 for idx, u in df_users.iterrows():
 
+    # Data cleaning
+
     q = cur.execute(
         '''INSERT INTO homework_users (username, first_name, last_name, prog_lang, experience_yr, age, hw1_hrs) VALUES (%s,%s,%s,%s,%s,%s,%s)''',
         (u.username, u.first_name, u.last_name, u.prog_lang, u.experience_yr, u.age, u.hw1_hrs)

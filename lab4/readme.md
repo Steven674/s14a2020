@@ -11,10 +11,10 @@ Welcome! This week we will be passing data to the client and building data visua
     2. Setup DB
         + Open psql in terminal: `psql postgres`
             + psql: `CREATE DATABASE homework_users_db;`
-            + psql: `\c homework_users`
+            + psql: `\c homework_users_db`
         + Seed from 'predefined_users.csv'
             + First take a look at './data/seed_db.py' and update user if not 'postgres'
-            + Run: `python data/db.py`
+            + Run: `python data/seed_db.py`
             + Confirm in psql: `SELECT * FROM homework_users;`
     
     3. Take a look at the new route '/load_data'
