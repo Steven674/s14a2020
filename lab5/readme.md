@@ -1,4 +1,4 @@
-## Lab 5
+## Lab 4
 
 Welcome! This week we will be working with user logins and sessions.
 
@@ -18,6 +18,8 @@ Welcome! This week we will be working with user logins and sessions.
     
     OR
     
+    + psql: `CREATE DATABASE lab5;`
+    + psql: `\c lab5`
     + psql: `\i lab5.sql`
    
 3. Everything else we have setup for you in the directory :^). However you will need to uncomment in app.py to discover how this code works out in the app.
