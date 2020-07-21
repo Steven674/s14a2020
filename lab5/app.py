@@ -28,7 +28,7 @@ def index():
         return render_template('index.html', title='Home', posts=all_posts)
 
 
-GET & POST /login
+#GET & POST /login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     # Init form
@@ -57,7 +57,7 @@ def login():
         return render_template('login.html', title='Login', form=form)
 
 
-POST /logout
+#POST /logout
 @app.route('/logout', methods=['POST'])
 def logout():
     # Logout
@@ -65,7 +65,7 @@ def logout():
     return redirect(url_for('index'))
 
 
-GET & POST /newpost
+#GET & POST /newpost
 @app.route('/newpost', methods=['GET', 'POST'])
 def newpost():
     # Init form
@@ -92,7 +92,7 @@ def newpost():
         return render_template('newpost.html', title='Newpost', form=form)
 
 
-GET & POST /signup
+#GET & POST /signup
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     # Init form
